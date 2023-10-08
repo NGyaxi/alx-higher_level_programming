@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 import sys
 
-def main(argv):
-    argc = len(argv)
-    result = 0
+if __name__ != "__main__":
+    exit()
 
-    for i in range(1, argc):  # Start from index 1 to skip the script name
-        result += int(argv[i])
+argc = len(sys.argv) - 1
 
-    print(result)
-
-if __name__ == "__main__":
-    main(sys.argv)
+i = 0
+result = 0
+for arg in sys.argv:
+    if i != 0:
+        result += int(arg)
+    else:
+        i += 1
+print("{:d}".format(result))
