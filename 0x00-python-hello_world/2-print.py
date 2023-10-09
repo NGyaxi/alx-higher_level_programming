@@ -1,2 +1,2 @@
-# Python script that prints the specified message
+#!/usr/bin/python3
 print("Programming is like building a multilingual puzzle")
